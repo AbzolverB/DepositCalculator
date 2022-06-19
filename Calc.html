@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Калькулятор вкладов</title>
+</head>
+<body>
+    <header>
+        <h1>Расчет дохода по вкладу</h1>
+    </header>
+    <main>
+        <form id="form" action="/register">
+            <div>
+                <label for="depositType">Тип вклада</label>
+                <select id="depositType" name="type" required>
+                    <option value="" disabled selected hidden>Не выбран</option>
+                    <option value="replentishable">Пополняемый</option>
+                    <option value="urgent">Срочный</option>
+                </select>
+            </div>
+            <div>
+                <label for="depositTime">Срок вклада</label>
+                <select id="depositTime" name="time" required>
+                    <option value="" disabled selected hidden>Не выбран</option>
+                </select>
+            </div>
+            <div class="input">
+                <input type="number" id="depositSum" min="0" placeholder="Сумма вклада, руб"/>
+            </div>
+            <div class="input">
+                <button class="button" type="submit" id="submit"> Рассчитать </button>
+            </div>
+        </form>
+        <div class="resultWindow">
+            <p id="result"></p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
